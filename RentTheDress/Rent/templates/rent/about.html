@@ -1,11 +1,11 @@
-<html>
+{% load bootstrap3 %} {% load static %} {% bootstrap_css %} {% bootstrap_javascript %} {% block content %}
 
 <head>
     <title>Rent the Dress</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script:700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
-    <link href="rent.css" rel="stylesheet" type="text/css">
+    <link href="{% static 'rent.css' %}" type="text/css" rel="stylesheet" />
     <link href="imgs/dress_icon.png" rel="shortcut icon" />
     <script src="https://use.fontawesome.com/290e3db104.js"></script>
 
@@ -40,4 +40,4 @@
         <script src="rent.js"></script>
     </body>
 
-</html>
+{% endblock %}
