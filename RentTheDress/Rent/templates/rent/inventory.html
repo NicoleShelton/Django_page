@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
     <link href="{% static 'rent.css' %}" type="text/css" rel="stylesheet" />
     <script src="{% static 'rent.js' %}"></script>
-    <link href="imgs/dress_icon.png" rel="shortcut icon" />
+    <link href="{% static 'imgs/dress_icon.png' %}" rel="shortcut icon" />
 </head>
 
 <body>
@@ -29,7 +29,7 @@
 
     <div class="images">
         <div class="imgContainer">
-            <img src='imgs/casual.jpg'>
+            <img src="{% static 'imgs/casual.jpg' %}">
             <p id="dress">Casual Dress</p>
             <p id="description">Simple and beautiful for everyday wear.</p>
             <center><input type="number" id="Casual" placeholder="Quan" min="0" max="20">
@@ -38,7 +38,7 @@
         </div>
 
         <div class="imgContainer">
-            <img src="imgs/cocktail.jpg">
+            <img src="{% static 'imgs/cocktail.jpg' %}">
             <p id="dress">Cocktail dress</p>
             <p id="description">Classy dress for late nights with work friends.</p>
             <center><input type="number" id='Cocktail' placeholder="Quan" min="0" max="20">
@@ -47,7 +47,7 @@
         </div>
 
         <div class="imgContainer">
-            <img src="imgs/evening.jpg">
+            <img src="{% static 'imgs/evening.jpg' %}">
             <p id="dress">Evening dress</p>
             <p id="description">Elegant dress for any formal event.</p>
             <center><input type="number" id='Evening' placeholder="Quan" min="0" max="20">
@@ -56,7 +56,7 @@
         </div>
 
         <div class="imgContainer">
-            <img src="imgs/pageant.jpg">
+            <img src="{% static 'imgs/pageant.jpg' %}">
             <p id="dress">Pageant dress</p>
             <p id="description">Stunning sequin pageant dress.</p>
             <center><input type="number" id='Pageant' placeholder="Quan" min="0" max="20">
@@ -65,7 +65,7 @@
         </div>
 
         <div class="imgContainer">
-            <img src="imgs/prom.jpg">
+            <img src="{% static 'imgs/prom.jpg' %}">
             <p id="dress">Prom dress</p>
             <p id="description">Gorgeous 2-piece prom dress</p>
             <center><input type="number" id='Prom' placeholder="Quan" min="0" max="20">
@@ -74,7 +74,7 @@
         </div>
 
         <div class="imgContainer">
-            <img src="imgs/wedding.jpg">
+            <img src="{% static 'imgs/wedding.jpg' %}">
             <p id="dress">Wedding dress</p>
             <p id="description">Simple elegant wedding dress.</p>
             <center><input type="number" id='Wedding' placeholder="Quan" min="0" max="20">

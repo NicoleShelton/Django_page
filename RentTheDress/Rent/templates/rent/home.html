@@ -5,7 +5,7 @@
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script:700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
   <link href="{% static 'rent.css' %}" type="text/css" rel="stylesheet" />
-  <link href="imgs/dress_icon.png" rel="shortcut icon" />
+  <link href="{% static 'imgs/dress_icon.png' %}" rel="shortcut icon" />
 </head>
 
 <body>
@@ -21,12 +21,12 @@
   <h1>Welcome to Rent the Dress!</h1>
   <center>
     <div class="fading" style="max-width:400px">
-      <img class="animate-fading" src="imgs/casual.jpg" style="width:100%">
-      <img class="animate-fading" src="imgs/cocktail.jpg" style="width:100%">
-      <img class="animate-fading" src="imgs/evening.jpg" style="width:100%">
-      <img class="animate-fading" src="imgs/pageant.jpg" style="width:100%">
-      <img class="animate-fading" src="imgs/prom.jpg" style="width:100%">
-      <img class="animate-fading" src="imgs/wedding.jpg" style="width:100%">
+      <img class="animate-fading" src="{% static 'imgs/casual.jpg' %}" style="width:100%">
+      <img class="animate-fading" src="{% static 'imgs/cocktail.jpg' %}" style="width:100%">
+      <img class="animate-fading" src="{% static 'imgs/evening.jpg' %}" style="width:100%">
+      <img class="animate-fading" src="{% static 'imgs/pageant.jpg' %}" style="width:100%">
+      <img class="animate-fading" src="{% static 'imgs/prom.jpg' %}" style="width:100%">
+      <img class="animate-fading" src="{% static 'imgs/wedding.jpg' %}" style="width:100%">
     </div>
   </center>
   <script src="rent.js"></script>
