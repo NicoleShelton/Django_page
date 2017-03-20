@@ -1,3 +1,5 @@
+__pycache__
 *.pyc
-.sqlite3
-*.cpython
+.DS_Store
+db.sqlite3
+.vscode
