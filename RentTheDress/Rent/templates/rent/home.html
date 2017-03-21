@@ -12,12 +12,12 @@
 <body>
 
   <ul class="topnav" id="myTopnav">
-    <li><a href="home.html">Home</a></li>
-    <li><a href="inventory.html">Inventory</a></li>
-    <li><a href="about.html">About</a></li>
-    <li class="icon">
-      <a href="javascript:void(0);" onclick="responsive()">&#9776;</a></li>
-  </ul>
+        <li><a href="{% url 'RentTheDress:home' %}">Home</a></li>
+        <li><a href="{% url 'RentTheDress:inventory' %}">Inventory</a></li>
+        <li><a href="{% url 'RentTheDress:about' %}">About</a></li>
+        <li class="icon">
+            <a href="javascript:void(0);" onclick="responsive()">&#9776;</a></li>
+    </ul>
 
   <h1>Welcome to Rent the Dress!</h1>
   <center>
