@@ -20,24 +20,26 @@ var selectItem = {
 			var id = '#' + item;
 			var quantity = $(id).val();
 			var rentFee = 100;
+			var tax = 1.07;
+			var deposit = 10;
 		switch (item) {
 			case "Casual":
-				this.add(120 / 10 * quantity + rentFee * 1.07);
+				this.add(120 / deposit * quantity + rentFee * tax);
 				break;
 			case "Cocktail":
-				this.add(100 / 10 * quantity + rentFee * 1.07);
+				this.add(100 / deposit * quantity + rentFee * tax);
 				break;
 			case "Evening":
-				this.add(175 / 10 * quantity + rentFee * 1.07);
+				this.add(175 / deposit * quantity + rentFee * tax);
 				break;
 			case "Pageant":
-				this.add(150 / 10 * quantity + rentFee * 1.07);
+				this.add(150 / deposit * quantity + rentFee * tax);
 				break;
 			case "Prom":
-				this.add(200 / 10 * quantity + rentFee * 1.07);
+				this.add(200 / deposit * quantity + rentFee * tax);
 				break;
 			case "Wedding":
-				this.add(300 / 10 * quantity + rentFee * 1.07);
+				this.add(300 / deposit * quantity + rentFee * tax);
 				break;
 		}
 	},
