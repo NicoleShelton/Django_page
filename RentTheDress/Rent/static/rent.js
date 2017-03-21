@@ -7,7 +7,7 @@ function responsive() {
 	}
 }
 
-var purchaseItem = {
+var selectItem = {
 	"total": 0,
 	"lastTransactionAmount": 0,
 	//adding items
@@ -43,8 +43,8 @@ var purchaseItem = {
 	},
 }
 
-function showTotal() {
-	document.getElementById('total').innerHTML = "Your total is: $" + purchaseItem.total.toFixed(2);
+function rentItem() {
+	document.getElementById('rent').innerHTML = "Your total is: $" + selectItem.total.toFixed(2);
 }
 
 var myIndex = 0;

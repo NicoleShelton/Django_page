@@ -24,8 +24,8 @@
 
     <h1>Inventory</h1>
 
-    <center><button id="btn" type="button" onclick="showTotal()">Show Total</button> <b><p id="total"></p></b></center>
-    <p>Under each item select the quantity and click add. When finished click the button above to display the total.</p>
+    <center><button id="btn" type="button" onclick="rentItem()">Rent</button> <b><p id="rent"></p></b></center>
+    <p>Under each item select the quantity and click add. When finished click the button above to display the total and rent the selected items.</p>
 
     <div class="images">
         <div class="imgContainer">
@@ -33,7 +33,7 @@
             <p id="dress">Casual Dress</p>
             <p id="description">Simple and beautiful for everyday wear.</p>
             <center><input type="number" id="Casual" placeholder="Quan" min="0" max="20">
-                <button id="button" type="button" onclick="purchaseItem.scan('Casual')">Add</button></center>
+                <button id="button" type="button" onclick="selectItem.scan('Casual')">Add</button></center>
             <p id="price">$120</p>
         </div>
 
@@ -42,7 +42,7 @@
             <p id="dress">Cocktail dress</p>
             <p id="description">Classy dress for late nights with work friends.</p>
             <center><input type="number" id='Cocktail' placeholder="Quan" min="0" max="20">
-                <button id="button" type="button" onclick="purchaseItem.scan('Cocktail')">Add</button></center>
+                <button id="button" type="button" onclick="selectItem.scan('Cocktail')">Add</button></center>
             <p id="price">$100</p>
         </div>
 
@@ -51,7 +51,7 @@
             <p id="dress">Evening dress</p>
             <p id="description">Elegant dress for any formal event.</p>
             <center><input type="number" id='Evening' placeholder="Quan" min="0" max="20">
-                <button id="button" type="button" onclick="purchaseItem.scan('Evening')">Add</button></center>
+                <button id="button" type="button" onclick="selectItem.scan('Evening')">Add</button></center>
             <p id="price">$175</p>
         </div>
 
@@ -60,7 +60,7 @@
             <p id="dress">Pageant dress</p>
             <p id="description">Stunning sequin pageant dress.</p>
             <center><input type="number" id='Pageant' placeholder="Quan" min="0" max="20">
-                <button id="button" type="button" onclick="purchaseItem.scan('Pageant')">Add</button></center>
+                <button id="button" type="button" onclick="selectItem.scan('Pageant')">Add</button></center>
             <p id="price">$150</p>
         </div>
 
@@ -69,7 +69,7 @@
             <p id="dress">Prom dress</p>
             <p id="description">Gorgeous 2-piece prom dress</p>
             <center><input type="number" id='Prom' placeholder="Quan" min="0" max="20">
-                <button id="button" type="button" onclick="purchaseItem.scan('Prom')">Add</button></center>
+                <button id="button" type="button" onclick="selectItem.scan('Prom')">Add</button></center>
             <p id="price">$200</p>
         </div>
 
@@ -78,7 +78,7 @@
             <p id="dress">Wedding dress</p>
             <p id="description">Simple elegant wedding dress.</p>
             <center><input type="number" id='Wedding' placeholder="Quan" min="0" max="20">
-                <button id="button" type="button" onclick="purchaseItem.scan('Wedding')">Add</button></center>
+                <button id="button" type="button" onclick="selectItem.scan('Wedding')">Add</button></center>
             <p id="price">$300</p>
         </div>
     </div>
