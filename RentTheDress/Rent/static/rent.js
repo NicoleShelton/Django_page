@@ -16,11 +16,6 @@ var selectItem = {
 		this.total += itemCost;
 		this.lastTransactionAmount = itemCost;
 	},
-	//subtracting items
-	"sub": function (itemCost) {
-		this.max -= itemCost
-		this.lastTransactionAmount = itemCost;
-	},
 	//scanning items
 		"scan": function (item) {
 			var id = '#' + item;
@@ -32,7 +27,7 @@ var selectItem = {
 		switch (item) {
 			case "Casual":
 				this.add(120 / deposit * quantity + rentFee * tax);
-				this.sub(new_max = max - quantity);
+				new_max = max - quantity;
 				document.getElementById('Casual').setAttribute("max", new_max);
 				break;
 			case "Cocktail":
