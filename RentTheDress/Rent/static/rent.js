@@ -10,9 +10,15 @@ function responsive() {
 var selectItem = {
 	"total": 0,
 	"lastTransactionAmount": 0,
+	"max": 20,
 	//adding items
 	"add": function (itemCost) {
 		this.total += itemCost;
+		this.lastTransactionAmount = itemCost;
+	},
+	//subtracting items
+	"sub": function (itemCost) {
+		this.max -= itemCost
 		this.lastTransactionAmount = itemCost;
 	},
 	//scanning items
@@ -22,9 +28,12 @@ var selectItem = {
 			var rentFee = 100;
 			var tax = 1.07;
 			var deposit = 10;
+			var max = 20;
 		switch (item) {
 			case "Casual":
 				this.add(120 / deposit * quantity + rentFee * tax);
+				this.sub(new_max = max - quantity);
+				document.getElementById('Casual').setAttribute("max", new_max);
 				break;
 			case "Cocktail":
 				this.add(100 / deposit * quantity + rentFee * tax);
