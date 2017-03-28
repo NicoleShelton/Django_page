@@ -32,6 +32,8 @@ var selectItem = {
 				break;
 			case "Cocktail":
 				this.add(100 / deposit * quantity + rentFee * tax);
+				new_max = max - quantity;
+				document.getElementById('Cocktail').setAttribute("max", new_max);
 				break;
 			case "Evening":
 				this.add(175 / deposit * quantity + rentFee * tax);
