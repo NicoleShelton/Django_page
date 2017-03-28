@@ -37,15 +37,23 @@ var selectItem = {
 				break;
 			case "Evening":
 				this.add(175 / deposit * quantity + rentFee * tax);
+				new_max = max - quantity;
+				document.getElementById('Evening').setAttribute("max", new_max);
 				break;
 			case "Pageant":
 				this.add(150 / deposit * quantity + rentFee * tax);
+				new_max = max - quantity;
+				document.getElementById('Pageant').setAttribute("max", new_max);
 				break;
 			case "Prom":
 				this.add(200 / deposit * quantity + rentFee * tax);
+				new_max = max - quantity;
+				document.getElementById('Prom').setAttribute("max", new_max);
 				break;
 			case "Wedding":
 				this.add(300 / deposit * quantity + rentFee * tax);
+				new_max = max - quantity;
+				document.getElementById('Wedding').setAttribute("max", new_max);
 				break;
 		}
 	},
