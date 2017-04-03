@@ -24,12 +24,14 @@
 
     <h1>Inventory</h1>
 
+    <center><h3>You can only rent 1 dress at a time</h3></center>
+
 {% for dress in dresses %}
  <div class="imgContainer">
             <img src="{% static  dress.static_url  %}">
             <p id="dress">{{ dress.name }}</p>
             <p id="description">{{ dress.description }}</p>
-            <center><input type="number" id='Wedding' placeholder="Quan" min="0" max="{{ dress.quantity }}">
+            <center><input type="number" id='btn' placeholder="Quan" min="0" max="{{ dress.quantity }}">
             <form action="{% url 'RentTheDress:rent' dress.id %}" method="GET">
                 {% csrf_token %}
                 <input id="button" type="submit" value="Add"></input></center>

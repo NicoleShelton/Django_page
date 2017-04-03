@@ -1,4 +1,4 @@
-h1, p {
+h1, h3, p {
     text-align: center;
 }
 
@@ -12,10 +12,16 @@ body {
     background-color: #f0f5f5;
 }
 
+h3 {
+    color: #93cdae;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 200%;
+}
+
 p, li {
     color: #93cdae;
     font-family: 'Shadows Into Light', cursive;
-    font-size: 140%;
+    font-size: 180%;
 }
 
 td, a {
@@ -113,31 +119,22 @@ img {
     float: left;
 }
 
-#btn {
-    border-radius: 12px;
-    height: 40px;
-    width: 100px;
-    border-color: #9ac2f0;
-    font-family: 'Shadows Into Light', cursive;
-    text-align: center;
-    font-size: 20px;
-    }
-
 #button {
     border-radius: 12px;
     border-color: #9ac2f0;
     font-family: 'Shadows Into Light', cursive;
     text-align: center;
-    font-size: 15px;
-    width: 40px;
+    font-size: 20px;
+    height: 30px;
+    width: 60px;
 }
 
-#Casual, #Cocktail, #Evening, #Pageant, #Prom, #Wedding {
-    height: 25px;
-    width: 50px;
+#btn {
+    height: 30px;
+    width: 60px;
     border-radius: 12px;
     border-color: #9ac2f0;
     font-family: 'Shadows Into Light', cursive;
     text-align: center;
-    font-size: 15px;
+    font-size: 20px;
 }
