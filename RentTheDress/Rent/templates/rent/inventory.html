@@ -24,64 +24,19 @@
 
     <h1>Inventory</h1>
 
-    <center><button id="btn" type="button" onclick="rentItem()">Rent</button> <b><p id="rent"></p></b></center>
-    <p>Under each item select the quantity and click add. When finished click the button above to display the total and rent the selected items.</p>
-
-    <div class="images">
-        <div class="imgContainer">
-            <img src="{% static 'imgs/casual.jpg' %}">
-            <p id="dress">Casual Dress</p>
-            <p id="description">Simple and beautiful for everyday wear.</p>
-            <center><input type="number" id="Casual" placeholder="Quan" min="0" max="20">
-                <button id="button" type="button" onclick="selectItem.scan('Casual')">Add</button></center>
-            <p id="price">$120</p>
-        </div>
-
-        <div class="imgContainer">
-            <img src="{% static 'imgs/cocktail.jpg' %}">
-            <p id="dress">Cocktail dress</p>
-            <p id="description">Classy dress for late nights with work friends.</p>
-            <center><input type="number" id='Cocktail' placeholder="Quan" min="0" max="20">
-                <button id="button" type="button" onclick="selectItem.scan('Cocktail')">Add</button></center>
-            <p id="price">$100</p>
-        </div>
-
-        <div class="imgContainer">
-            <img src="{% static 'imgs/evening.jpg' %}">
-            <p id="dress">Evening dress</p>
-            <p id="description">Elegant dress for any formal event.</p>
-            <center><input type="number" id='Evening' placeholder="Quan" min="0" max="20">
-                <button id="button" type="button" onclick="selectItem.scan('Evening')">Add</button></center>
-            <p id="price">$175</p>
-        </div>
-
-        <div class="imgContainer">
-            <img src="{% static 'imgs/pageant.jpg' %}">
-            <p id="dress">Pageant dress</p>
-            <p id="description">Stunning sequin pageant dress.</p>
-            <center><input type="number" id='Pageant' placeholder="Quan" min="0" max="20">
-                <button id="button" type="button" onclick="selectItem.scan('Pageant')">Add</button></center>
-            <p id="price">$150</p>
-        </div>
-
-        <div class="imgContainer">
-            <img src="{% static 'imgs/prom.jpg' %}">
-            <p id="dress">Prom dress</p>
-            <p id="description">Gorgeous 2-piece prom dress</p>
-            <center><input type="number" id='Prom' placeholder="Quan" min="0" max="20">
-                <button id="button" type="button" onclick="selectItem.scan('Prom')">Add</button></center>
-            <p id="price">$200</p>
-        </div>
-
-        <div class="imgContainer">
-            <img src="{% static 'imgs/wedding.jpg' %}">
-            <p id="dress">Wedding dress</p>
-            <p id="description">Simple elegant wedding dress.</p>
-            <center><input type="number" id='Wedding' placeholder="Quan" min="0" max="20">
-                <button id="button" type="button" onclick="selectItem.scan('Wedding')">Add</button></center>
-            <p id="price">$300</p>
-        </div>
-    </div>
+{% for dress in dresses %}
+ <div class="imgContainer">
+            <img src="{% static  dress.static_url  %}">
+            <p id="dress">{{ dress.name }}</p>
+            <p id="description">{{ dress.description }}</p>
+            <center><input type="number" id='Wedding' placeholder="Quan" min="0" max="{{ dress.quantity }}">
+            <form action="{% url 'RentTheDress:rent' dress.id %}" method="GET">
+                {% csrf_token %}
+                <input id="button" type="submit" value="Add"></input></center>
+                </form>
+            <p id="price">${{ dress.price }}</p>
+        </div>  
+{% endfor %}
 </body>
 
 {% endblock %}
