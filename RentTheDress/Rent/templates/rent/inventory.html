@@ -35,12 +35,11 @@
             <center><input type="number" id='btn' placeholder="Quan" min="0" max="{{ dress.quantity }}">
             <form action="{% url 'RentTheDress:rent' dress.id %}" method="GET">
                 {% csrf_token %}
-                <input id="button" type="submit" value="Rent"></input></center>
+                <input id="button" type="submit" value="Rent"></input>
                 </form>
                 <form action="{% url 'RentTheDress:return' dress.id %}" method="GET">
-                {% csrf_token %}
-                <input id="button" type="submit" value="Return"></input></center>
-                </form>
+                <input id="button" type="submit" value="Return"></input>
+                </form></center>
             <p id="price">${{ dress.price }}</p>
         </div>  
 {% endfor %}
