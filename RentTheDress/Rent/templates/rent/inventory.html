@@ -1,5 +1,6 @@
 {% load bootstrap3 %} {% load static %} {% bootstrap_css %} {% bootstrap_javascript %} {% block content %}
 
+
 <head>
     <title>Rent the Dress</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -34,7 +35,11 @@
             <center><input type="number" id='btn' placeholder="Quan" min="0" max="{{ dress.quantity }}">
             <form action="{% url 'RentTheDress:rent' dress.id %}" method="GET">
                 {% csrf_token %}
-                <input id="button" type="submit" value="Add"></input></center>
+                <input id="button" type="submit" value="Rent"></input></center>
+                </form>
+                <form action="{% url 'RentTheDress:return' dress.id %}" method="GET">
+                {% csrf_token %}
+                <input id="button" type="submit" value="Return"></input></center>
                 </form>
             <p id="price">${{ dress.price }}</p>
         </div>  

@@ -11,8 +11,14 @@ def inventory(request):
 def about(request):
     return render(request, 'rent/about.html')
 
-def rent(request, id):
+def renting(request, id):
     dress = Dress.objects.get(pk=id)
     dress.quantity -= 1
+    dress.save()
+    return redirect('RentTheDress:inventory')
+
+def returning(request, id):
+    dress = Dress.objects.get(pk=id)
+    dress.quantity += 1
     dress.save()
     return redirect('RentTheDress:inventory')
