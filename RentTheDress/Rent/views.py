@@ -13,12 +13,14 @@ def about(request):
 
 def renting(request, id):
     dress = Dress.objects.get(pk=id)
-    dress.quantity -= 1
-    dress.save()
+    if dress.quantity != 0:
+        dress.quantity -= 1
+        dress.save()
     return redirect('RentTheDress:inventory')
 
 def returning(request, id):
     dress = Dress.objects.get(pk=id)
-    dress.quantity += 1
-    dress.save()
+    if dress.quantity != 20:
+        dress.quantity += 1
+        dress.save()
     return redirect('RentTheDress:inventory')
