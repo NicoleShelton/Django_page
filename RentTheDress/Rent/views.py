@@ -29,5 +29,5 @@ def returning(request, id):
         dress.save()
         messages.add_message(request, messages.SUCCESS, 'Sucessfully returned ' + dress.name + '!')
     elif dress.quantity == 20:
-        messages.add_message(request, messages.WARNING, 'Could not return ' + dress.name + ' item is full!')
+        messages.add_message(request, messages.WARNING, 'Could not return ' + dress.name + ' item is fullly stocked!')
     return redirect('RentTheDress:inventory')
