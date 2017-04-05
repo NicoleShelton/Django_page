@@ -23,26 +23,36 @@
             <a href="javascript:void(0);" onclick="responsive()">&#9776;</a></li>
     </ul>
 
-    <br /><br /><h1>Inventory</h1><br />
+    <br /><br />
+    <h1>Inventory</h1><br />
 
-    <center><h3>You can only rent 1 dress at a time</h3></center>
-
-{% for dress in dresses %}
- <div class="imgContainer">
-            <img src="{% static  dress.static_url  %}">
-            <p id="dress">{{ dress.name }}</p>
-            <p id="description">{{ dress.description }}</p>
-            <center><input type="number" id='btn' placeholder="Quan" min="0" max="{{ dress.quantity }}">
+    <center>
+        <h3>You can only rent 1 dress at a time</h3>
+    </center>
+    {% for message in messages %}
+    <center> 
+        <div class="alert alert-{{ message.tags }}">
+            {{ message }} 
+        </div>
+    </center>
+    {% endfor %} 
+    {% for dress in dresses %}
+    <div class="imgContainer">
+        <img src="{% static  dress.static_url  %}">
+        <p id="dress">{{ dress.name }}</p>
+        <p id="description">{{ dress.description }}</p>
+        <center><input type="number" id='btn' placeholder="Quan" min="0" max="{{ dress.quantity }}">
             <form action="{% url 'RentTheDress:rent' dress.id %}" method="GET">
                 {% csrf_token %}
                 <input id="button" type="submit" value="Rent"></input>
-                </form>
-                <form action="{% url 'RentTheDress:return' dress.id %}" method="GET">
+            </form>
+            <form action="{% url 'RentTheDress:return' dress.id %}" method="GET">
                 <input id="button" type="submit" value="Return"></input>
-                </form></center>
-            <p id="price">${{ dress.price }}</p>
-        </div>  
-{% endfor %}
+            </form>
+        </center>
+        <p id="price">${{ dress.price }}</p>
+    </div>
+    {% endfor %}
 </body>
 
 {% endblock %}
