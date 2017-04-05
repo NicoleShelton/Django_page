@@ -1,4 +1,4 @@
-{% load bootstrap3 %} {% load static %} {% bootstrap_css %} {% bootstrap_javascript %} {% block content %}
+{% load bootstrap3 %} {% load static %} {% bootstrap_css %} {% block content %}
 
 <head>
     <title>Rent the Dress</title>
@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script:700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
     <link href="{% static 'rent.css' %}" type="text/css" rel="stylesheet" />
+    <link href="{% static 'rent.js' %}" type="text/css" rel="stylesheet" />
     <link href="{% static 'imgs/dress_icon.png' %}" rel="shortcut icon" />
     <script src="https://use.fontawesome.com/290e3db104.js"></script>
 
@@ -36,7 +37,6 @@
                 <td><a href="https://www.facebook.com/"><i class="fa fa-facebook-square"></i></a></td>
             </tr>
         </table>
-        <script src="rent.js"></script>
     </body>
 
     {% endblock %}

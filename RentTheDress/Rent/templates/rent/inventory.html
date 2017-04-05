@@ -1,4 +1,4 @@
-{% load bootstrap3 %} {% load static %} {% bootstrap_css %} {% bootstrap_javascript %} {% block content %}
+{% load bootstrap3 %} {% load static %} {% bootstrap_css %} {% block content %}
 
 
 <head>
@@ -12,8 +12,6 @@
 </head>
 
 <body>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-    <script src="jquery.tools.min.js"></script>
 
     <ul class="topnav" id="myTopnav">
         <li><a href="{% url 'RentTheDress:home' %}">Home</a></li>
@@ -41,7 +39,7 @@
         <img src="{% static  dress.static_url  %}">
         <p id="dress">{{ dress.name }}</p>
         <p id="description">{{ dress.description }}</p>
-        <center><input type="number" id='btn' placeholder="Quan" min="0" max="{{ dress.quantity }}">
+        <center><h4>In Stock: {{ dress.quantity }}</h4>
             <form action="{% url 'RentTheDress:rent' dress.id %}" method="GET">
                 {% csrf_token %}
                 <input id="button" type="submit" value="Rent"></input>
