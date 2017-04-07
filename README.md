@@ -1,1 +1,1 @@
-Django_page
+Django based project of rental agency
