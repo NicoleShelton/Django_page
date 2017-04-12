@@ -1,3 +1,4 @@
+// This makes the navbar responsive
 function responsive() {
 	var response = document.getElementById("myTopnav");
 	if (response.className === "topnav") {
@@ -7,11 +8,12 @@ function responsive() {
 	}
 }
 
+// This is what operates the carousel
 var myIndex = 0;
 carousel();
-
 function carousel() {
     var i;
+    // This is getting the pictures by the class name
     var x = document.getElementsByClassName("animate-fading");
     for (i = 0; i < x.length; i++) {
        x[i].style.display = "none";  

@@ -27,27 +27,36 @@
     <center>
         <h3>You can only rent 1 dress at a time</h3>
     </center>
+    <!--Gets the messages from the views-->
     {% for message in messages %}
     <center> 
+        <!--Shows the success or failure message when user rents or returns items-->
         <div class="alert alert-{{ message.tags }}">
             {{ message }} 
         </div>
     </center>
     {% endfor %} 
+    <!--Gets the dresses from the models-->
     {% for dress in dresses %}
     <div class="imgContainer">
         <img src="{% static  dress.static_url  %}">
+        <!--This is getting all the dress names that were created on the admin page-->
         <p id="dress">{{ dress.name }}</p>
+        <!--This is getting all the dress descriptions that were created on the admin page-->
         <p id="description">{{ dress.description }}</p>
+        <!--This is getting all the dress quantities that were created on the admin page-->
         <center><h4>In Stock: {{ dress.quantity }}</h4>
+            <!--This is the action for renting a dress-->
             <form action="{% url 'RentTheDress:rent' dress.id %}" method="GET">
                 {% csrf_token %}
                 <input id="button" type="submit" value="Rent"></input>
             </form>
+            <!--This is the action for returning a dress-->
             <form action="{% url 'RentTheDress:return' dress.id %}" method="GET">
                 <input id="button" type="submit" value="Return"></input>
             </form>
         </center>
+        <!--This is getting all the dress prices that were created on the admin page-->
         <p id="price">${{ dress.price }}</p>
     </div>
     {% endfor %}
